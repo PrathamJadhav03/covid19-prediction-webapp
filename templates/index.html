@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>COVID-19 Prediction</h2>
+        <form id="predictionForm">
+            <div class="form-group">
+                <label>Does the patient have breathing problem?</label>
+                <input type="number" name="Breathing_Problem" required>
+            </div>
+            <div class="form-group">
+                <label>Does the patient have fever?</label>
+                <input type="number" name="Fever" required>
+            </div>
+            <div class="form-group">
+                <label>Does the patient have dry cough?</label>
+                <input type="number" name="Dry_Cough" required>
+            </div>
+            <div class="form-group">
+                <label>Does the patient have sore throat?</label>
+                <input type="number" name="Sore_throat" required>
+            </div>
+            <div class="form-group">
+                <label>Does the patient have running nose?</label>
+                <input type="number" name="Running_Nose" required>
+            </div>
+            <div class="form-group">
+                <label>Does the patient have any record of asthma?</label>
+                <input type="number" name="Asthma" required>
+            </div>
+            <div class="form-group">
+                <label>Does the patient have any records of chronic lung disease?</label>
+                <input type="number" name="Chronic_Lung_Disease" required>
+            </div>
+            <div class="form-group">
+                <label>Is the patient having headache?</label>
+                <input type="number" name="Headache" required>
+            </div>
+            <div class="form-group">
+                <label>Does the patient have any record of any heart disease?</label>
+                <input type="number" name="Heart_Disease" required>
+            </div>
+            <div class="form-group">
+                <label>Does the patient have diabetes?</label>
+                <input type="number" name="Diabetes" required>
+            </div>
+            <div class="form-group">
+                <label>Does the patient have hyper tension?</label>
+                <input type="number" name="Hyper_Tension" required>
+            </div>
+            <div class="form-group">
+                <label>Does the patient experience fatigue?</label>
+                <input type="number" name="Fatigue" required>
+            </div>
+            <div class="form-group">
+                <label>Does the patient have any gastrointestinal disorders?</label>
+                <input type="number" name="Gastrointestinal" required>
+            </div>
+            <div class="form-group">
+                <label>Has the patient travelled abroad recently?</label>
+                <input type="number" name="Abroad_travel" required>
+            </div>
+            <div class="form-group">
+                <label>Was the patient in contact with a covid patient recently?</label>
+                <input type="number" name="Contact_with_COVID_Patient" required>
+            </div>
+            <div class="form-group">
+                <label>Did the patient attend any large gathering event recently?</label>
+                <input type="number" name="Attended_Large_Gathering" required>
+            </div>
+            <div class="form-group">
+                <label>Did the patient visit any public exposed places recently?</label>
+                <input type="number" name="Visited_Public_Exposed_Places" required>
+            </div>
+            <div class="form-group">
+                <label>Does the patient have any family member working in public exposed places?</label>
+                <input type="number" name="Family_working_in_Public_Exposed_Places" required>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+        <h3 id="result"></h3>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
